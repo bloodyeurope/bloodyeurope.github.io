@@ -1,0 +1,122 @@
+body {
+  background-color: #ff0000;
+  background-image: url('img/CoverMockup.png');
+  background-size: cover;
+  background-position: center top;
+}
+
+.dark-background {
+  background-color: black;
+}
+
+/*Header font and animation*/
+@font-face {
+  font-family: 'title_font';
+  src: url('font/kosan-murah.regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'text_font';
+  src: url('font/Burvetica\ Thick\ NC.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'old-text';
+  src: url('font/OldNewspaperTypes.ttf') format('truetype');
+}
+
+header h1 {
+  font-family: 'title_font', sans-serif;  
+}
+
+.sinopsis p {
+  padding: 1%;
+  border-radius: 10px;
+  font-family: 'text_font', sans-serif;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 3px 3px rgba(0,0,0,0.8); /* Increase the opacity value (0.8 in this example) */
+  -webkit-text-stroke: 1px rgb(0, 0, 0); /* Add a black border around the text */
+}
+
+.one p {
+  font-family: 'old-text', sans-serif;
+  background-color: rgb(0, 0, 0);
+  -webkit-text-stroke: 0px rgb(255, 255, 255); /* Add a black border around the text */
+}
+
+
+@media (min-width: 1025px) {
+  header h1 {
+      font-size: 10vw;
+  }
+  .sinopsis p {
+    font-size: 20px;
+  }
+
+  .one p{
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  header h1 {
+      font-size: 25vw;
+  }
+  .sinopsis p {
+    font-size: 4vp;
+  }
+  .one p{
+    font-size: 2pv;
+  }
+}
+
+/* Keyframe animation for heartbeat effect */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.1);
+  }
+  30% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(1);
+  }
+}
+
+/* Apply heartbeat animation to header text */
+.header-heartbeat {
+  animation: heartbeat 1s infinite;
+}
+
+.custom-primary {
+  color: #fff; /* Text color */
+  background-color: rgb(255 62 181); /* Background color */
+  border-color: rgb(255 62 181); /* Border color */
+}
+
+  /* Custom styles for outline primary button */
+  .btn-outline-primary.custom-outline-primary {
+    border-color: rgb(255 62 181); /* Specify your desired border color */
+    color: #ffffff; /* Text color */
+}
+
+.btn-outline-primary.custom-outline-primary:hover {
+    background-color: rgb(255 62 181); /* Specify your desired hover color */
+    border-color: rgb(255 62 181); /* Apply hover color to border */
+    color: #000000; /* Text color on hover */
+}
+
+
+.btn-outline-primary.custom-outline-primary:focus,
+.btn-outline-primary.custom-outline-primary:active {
+  background-color: rgb(255 233 0); /* Specify your desired hover/active color */
+  border-color: rgb(255 233 0); /* Apply hover/active color to border */
+  color: #000000; /* Text color on hover/active */
+}
