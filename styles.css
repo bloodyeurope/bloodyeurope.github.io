@@ -3,6 +3,7 @@ body {
   background-image: url('img/CoverMockup.png');
   background-size: cover;
   background-position: center top;
+  padding-bottom: 270px; /* Adjust this value to match the height of your footer */
 }
 
 .dark-background {
